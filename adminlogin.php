@@ -5,8 +5,8 @@ include("connection.php");
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="adminst.css">
-    <title>Login</title>
+    <link rel="stylesheet" href="loginst.css">
+    <title>Admin Login</title>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <style type="text/css">
@@ -15,7 +15,6 @@ include("connection.php");
             background-position: center;
             background-size: cover;
         }
-        
     </style>
 </head>
 
@@ -27,13 +26,13 @@ include("connection.php");
                     <h2>Admin Login</h2>
                     <div class="inputbox">
                         <ion-icon name="person-outline"></ion-icon>
-                        <input type="text" name="username" required>
-                        <label for="username">Username</label>
+                        <input type="text" name="user_name" required>
+                        <label for="user_name">Username</label>
                     </div>
                     <div class="inputbox">
                         <ion-icon name="lock-closed-outline"></ion-icon>
-                        <input type="password" name="password" required>
-                        <label for="password">Password</label>
+                        <input type="password" name="Password" required>
+                        <label for="Password">Password</label>
                     </div>
                     <button name="submit">Log in</button>
                     <div class="register">

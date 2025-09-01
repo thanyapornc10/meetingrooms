@@ -10,7 +10,6 @@ $username = $_SESSION["username"];
 ?>
 
 <!DOCTYPE html>
-<!-- Website - www.codingnepalweb.com -->
 <html lang="en" dir="ltr">
 
 <head>
@@ -20,10 +19,9 @@ $username = $_SESSION["username"];
     <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
 
     <meta charset="utf-8" />
-    <title>Infinite Card Slider JavaScript | CodingNepal</title>
+    <title>Booking Rooms</title>
     <link rel="stylesheet" href="style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Fontawesome Link for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
     <script src="script.js" defer></script>
 </head>

@@ -1,12 +1,15 @@
 <?php
-include("connection.php");
-require("admin_post.php");
-// session_start();
-if (!isset($_SESSION["username"])) {
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+
+require_once 'connection.php';
+
+if (empty($_SESSION['user_name'])) {
     header("Location: adminlogin.php");
     exit();
 }
-$username = $_SESSION["username"];
+$user_name = $_SESSION['user_name'];
 ?>
 
 <!DOCTYPE html>
@@ -17,6 +20,7 @@ $username = $_SESSION["username"];
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="adminst.css">
+    <link rel="stylesheet" href="style.css">
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 
@@ -35,15 +39,14 @@ $username = $_SESSION["username"];
             background-position: center;
             background-size: cover;
         }
-
     </style>
 </head>
 
 <body>
     <header class="header">
-        <a href="index.php" class="logo">Meeting Rooms</a>
+        <a href="adminpage.php" class="logo">Meeting Rooms</a>
         <nav class="navbar">
-            <a href="#"><?php echo $_SESSION["username"]; ?></a>
+            <a href="#"><?php echo htmlspecialchars($user_name); ?></a>
             <a href="logout.php" class="botton">Log out</a>
         </nav>
     </header>
